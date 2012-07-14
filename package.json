@@ -1,0 +1,15 @@
+{
+  "name": "streaker-js",
+  "version": "0.0.1",
+  "description": "Calculate daily, weekly, and monthly streaks.",
+  "main": "streaker.js",
+  "keywords": [
+    "date",
+    "time",
+    "streaks"
+  ],
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/iancanderson/streaker-js.git"
+  } 
+}
