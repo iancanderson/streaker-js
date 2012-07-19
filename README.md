@@ -20,6 +20,21 @@ var datesWithoutTodayOrYesterday = [ new Date(2012, 6, 6) ];
 var currentStreak = streaker(datesWithoutTodayOrYesterday).current(); // 0 - the streak is broken as of today
 ```
 
+Optionally pass in a whitelist for days of the week to consider.
+Days not in the list will be ignored when calculating the streak.
+
+``` javascript
+// Assuming the date is currently new Date(2012, 6, 8), which is a Sunday :
+var weekdays = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday']
+var dates = [ new Date(2012, 6, 6), new Date(2012, 6, 7), new Date(2012, 6, 8) ];
+var currentStreak = streaker(dates, 'daily', weekdays).current(); // 1, because today and yesterday don't count
+
+// Assuming the date is currently new Date(2012, 6, 9), which is a Monday :
+var weekdays = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday']
+var dates = [ new Date(2012, 6, 6) ]; // last friday
+var currentStreak = streaker(dates, 'daily', weekdays).current(); // 1, because the weekend didn't count
+```
+
 Weekly:
 
 ``` javascript
