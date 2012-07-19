@@ -1,4 +1,8 @@
-{StreakCalculator} = require './streak_calculator'
+{StreakCalculator} =
+  if require?
+    require './streak_calculator'
+  else
+    @StreakCalculator
 
 ALL_DAYS = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday']
 

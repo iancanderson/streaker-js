@@ -8,8 +8,9 @@ moment =
   else
     @moment
 
-require './date_range'
-_ = require 'underscore'
+if require? then require './date_range'
+
+_ = if require? then require 'underscore' else @_
 
 class StreakCalculator
   constructor: (@date_times, @frequency, @days_whitelist) ->
