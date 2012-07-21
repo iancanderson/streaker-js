@@ -1,9 +1,12 @@
 <html>
   <head>
-    <script src='https://raw.github.com/iancanderson/streaker-js/master/lib/streaker.js'></script>
+    <!--<script src='https://raw.github.com/iancanderson/streaker-js/master/lib/streaker.js'></script>-->
+    <script src='https://raw.github.com/timrwood/moment/master/moment.js'></script>
+    <script src='https://raw.github.com/documentcloud/underscore/master/underscore-min.js'></script>
+    <script src='streaker.js'></script>
     <script type="text/javascript">
       var yesterday = new Date();
-      yesterday.setDate(d.getDate() - 1);
+      yesterday.setDate(yesterday.getDate() - 1);
       var dates = [yesterday, new Date()]
       var currentStreak = streaker(dates).current()
       alert(currentStreak); //should be 2

@@ -1,4 +1,4 @@
-{streaker} = require '../lib/streaker'
+#{streaker} = require '../lib/streaker'
 
 exports.streak_calculator =
   "should return 0 without parameters": (test) ->

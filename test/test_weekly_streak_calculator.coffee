@@ -1,4 +1,4 @@
-{streaker} = require '../lib/streaker'
+#{streaker} = require '../lib/streaker'
 testCase = require('nodeunit').testCase
 moment = require('moment')
 sinon = require('sinon')

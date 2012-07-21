@@ -2,15 +2,15 @@
 # Checking to see if a progress record exists within the interval.
 # Once we don't find a progress record in an interval, stop counting.
 
-moment =
-  if require?
-    require 'moment'
-  else
-    @moment
+#moment =
+  #if require?
+    #require 'moment'
+  #else
+    #@moment
 
-if require? then require './date_range'
+#if require? then require './date_range'
 
-_ = if require? then require 'underscore' else @_
+#_ = if require? then require 'underscore' else @_
 
 class StreakCalculator
   constructor: (@date_times, @frequency, @days_whitelist) ->
@@ -101,4 +101,5 @@ class StreakCalculator
     current_range = moment().range(sunday.sod(), saturday.eod())
     @streak += 1 if @date_times.some (date)-> current_range.contains(date)
 
-exports.StreakCalculator = StreakCalculator
+if exports?
+  exports.StreakCalculator = StreakCalculator
