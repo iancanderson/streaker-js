@@ -1,9 +1,3 @@
-#moment =
-  #if require?
-    #require 'moment'
-  #else
-    #@moment
-
 # Stolen from https://github.com/gf3/moment-range
 # Only change is that contains() is now an inclusive check instead of exclusive
 

@@ -2,16 +2,6 @@
 # Checking to see if a progress record exists within the interval.
 # Once we don't find a progress record in an interval, stop counting.
 
-#moment =
-  #if require?
-    #require 'moment'
-  #else
-    #@moment
-
-#if require? then require './date_range'
-
-#_ = if require? then require 'underscore' else @_
-
 class StreakCalculator
   constructor: (@date_times, @frequency, @days_whitelist) ->
 
